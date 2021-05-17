@@ -1,8 +1,40 @@
 # OnlineStore-WebDevClassroom
-Final project of Introduction to Web development classroom - SCC0219
+Final project of Introduction to Web development classroom - SCC0219, where will be implemented a bookstore.
+
 **Group 19**:
 | **Nome Completo**                 | **N°USP**    | **e-mail**               |
 |-----------------------------------|--------------|--------------------------|
 | Fabio Dias da Cunha               |   11320874   | fabiodias11@usp.br       |
 | Lucas Gabriel de Araujo Silva     |   11218880   | lucasgasilva@usp.br      |
 | Thiago Sena de Queiroz            |   11218768   | thiagosdq@usp.br         |
+
+## Requirements
+
+* The system must have 2 types of users: Clients and Administrators:
+  * Administrators are responsible for registering/managing administrators, customers, and products/services provided. The application already comes with an account admin with password admin.
+  * Customers are users who access the system to buy products/services.
+* The admin record includes, at least: name, id, phone, email.
+* Each customer's record includes, at least: name, id, address, phone, email
+* Product/services records include, at least: name, id, photo, description, price, quantity (in stock), quantity sold.
+* Your store may sell products, services or both (you decide)
+* Selling Products (or services): Products are selected, their quantity chosen, and are included in a cart. Products are purchased using a credit card number (any number is accepted by the system). The quantity of product sold is subtracted from the quantity in stock and added to the quantity sold. Carts are emptied only on payment or by customers.
+* Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity.
+* User can create/update/read/delete (crud) a list of book wishs and readeaded.
+* Books has avaliation stars, that are ranked by users avaliations.
+* The system must provide accessibility requirements and provide good usability. The system must be responsive.
+
+## Project Description
+
+The project will implement a bookstore, that seel only books. Users can create account, buy books, control orders, make wishes and read lists.
+
+## Comments About the Code
+
+## Test Plan
+
+## Test Results
+
+## Build Procedures
+
+## Problems
+
+## Comments
