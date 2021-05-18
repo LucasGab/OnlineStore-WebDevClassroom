@@ -1,0 +1,11 @@
+.about-main-section {
+    width: 100%;
+    padding: 1rem 5rem;
+}
+
+.about-main-section p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    text-align: justify;
+}
