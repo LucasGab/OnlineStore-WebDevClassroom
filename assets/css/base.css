@@ -15,6 +15,10 @@ a {
   color: inherit;
 }
 
+a:hover {
+  color: rgb(196, 50, 50);
+}
+
 button {
   padding: 0.5rem 1rem;
   outline: none;
@@ -146,7 +150,7 @@ p {
 
 .books-main-section .books-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 20%);
+  grid-template-columns: repeat(auto-fill, minmax(250px, auto));
   row-gap: 5%;
   justify-content: space-between;
   padding: 1rem;
