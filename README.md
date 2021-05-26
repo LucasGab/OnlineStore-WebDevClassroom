@@ -1,4 +1,5 @@
 # OnlineStore-WebDevClassroom
+
 Final project of Introduction to Web development classroom - SCC0219, where will be implemented a bookstore.
 
 **Group 19**:
@@ -19,6 +20,7 @@ Final project of Introduction to Web development classroom - SCC0219, where will
 * Your store may sell products, services or both (you decide)
 * Selling Products (or services): Products are selected, their quantity chosen, and are included in a cart. Products are purchased using a credit card number (any number is accepted by the system). The quantity of product sold is subtracted from the quantity in stock and added to the quantity sold. Carts are emptied only on payment or by customers.
 * Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity.
+* The books record includes, at least: name, authors, price, quantity, editors
 * User can create/update/read/delete (crud) a list of book wishs and readeaded.
 * Books has avaliation stars, that are ranked by users avaliations.
 * The system must provide accessibility requirements and provide good usability. The system must be responsive.
@@ -26,6 +28,34 @@ Final project of Introduction to Web development classroom - SCC0219, where will
 ## Project Description
 
 The project will implement a bookstore, that seel only books. Users can create account, buy books, control orders, make wishes and read lists.
+
+The user general navigation flow, can be viwed on image:
+
+![diagram image](./projectImgs/diagram.png)
+
+### Functionality
+
+Admin Page: Admin user can crud on users ,books and contacts
+
+Contact Page: User can send Contact request forms
+
+Wishes Page: User can rud wishes list
+
+About Page: Nothing
+
+Homem Page: Nothing
+
+Registe Page: Anonymous user can create an account
+
+Login Page: Existig user can authenticate on account
+
+Orders Page: Nothing
+
+Books Page: Nothing
+
+Specif Book Page: User can add "x" quantity to cart and add or remove book from wishes list
+
+Cart Page: User can end and pay a purchase or clean books in cart
 
 ## Comments About the Code
 
