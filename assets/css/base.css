@@ -19,7 +19,21 @@ a:hover {
   color: rgb(196, 50, 50);
 }
 
-button {
+form input {
+  margin: 0.4rem 0;
+  padding: 0.8em;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+form label {
+  color: black;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+button, input[type=button]{
   padding: 0.5rem 1rem;
   outline: none;
   border: none;
@@ -29,7 +43,7 @@ button {
   transition: all 0.3s ease;
 }
 
-button:hover {
+button:hover, input[type=button]:hover {
   background-color: rgb(196, 50, 50);
   color: white;
   cursor: pointer;
