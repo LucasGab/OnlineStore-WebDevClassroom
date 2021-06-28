@@ -1,0 +1,51 @@
+.book-container {
+  padding: 5em 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(207, 7, 7, 0.623);
+  color: white;
+}
+
+.book-review {
+  margin: 1em 0;
+}
+
+.book-review .fa-star {
+  color: black;
+} 
+
+.book-review .fa-star.checked{
+  color: orange;
+} 
+
+.left-container {
+  width: 30%;
+}
+
+.right-container {
+  width: 30%;
+}
+
+.specification-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 1em 0;
+  color: black;
+}
+
+.specification-container .description {
+  padding: 1em 0;
+  width: 50%;
+}
+
+.description p {
+  font-size: 1.4em;
+  text-align: justify;
+  font-weight: 300;
+  margin-top: 1em;
+}

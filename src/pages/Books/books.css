@@ -1,0 +1,46 @@
+.books-container {
+  padding: 1rem 0;
+  display: flex;
+  width: 100%;
+  background-color: rgba(207, 7, 7, 0.623);
+}
+
+.categories-left-container {
+  width: 30%;
+  padding: 1rem 1rem;
+}
+
+.categories-left-container ul {
+  list-style: none;
+}
+
+.categories-left-container .categories-header {
+  border-bottom: 1px solid black;
+  padding: 1rem 0 0.5rem 0;
+}
+
+.categories-left-container .categories-item {
+  border-bottom: 1px dashed black;
+  padding: 1.5rem 0;
+}
+
+.books-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+  row-gap: 5%;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.books-right-container {
+  width: 70%;
+  overflow: auto;
+  padding: 1rem 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.books-right-container::-webkit-scrollbar {
+  display: none;
+}

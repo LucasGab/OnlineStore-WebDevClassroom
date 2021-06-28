@@ -1,0 +1,42 @@
+.footer-main {
+  padding: 0.4rem 10%;
+  text-align: center;
+  border-top: 1px solid rgba(224, 218, 218, 0.274);
+  background-color: gray;
+  color: white;
+}
+
+.footer-main .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+
+.footer-main p {
+  font-size: 1rem;
+}
+
+.footer-main i {
+  font-size: 2.2rem;
+}
+
+.footer-main i:hover {
+  color: brown;
+}
+
+.footer-main ul {
+  display: inline-flex;
+  list-style: none;
+  padding: 1rem;
+}
+
+.footer-main li {
+  padding: 0 1rem;
+}
+
+.footer-main div {
+  padding: 1rem 0 0 0 ;
+}

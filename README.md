@@ -9,6 +9,8 @@ Final project of Introduction to Web development classroom - SCC0219, where will
 | Lucas Gabriel de Araujo Silva     |   11218880   | lucasgasilva@usp.br      |
 | Thiago Sena de Queiroz            |   11218768   | thiagosdq@usp.br         |
 
+---
+
 ## Requirements
 
 * The system must have 2 types of users: Clients and Administrators:
@@ -25,6 +27,8 @@ Final project of Introduction to Web development classroom - SCC0219, where will
 * Books has avaliation stars, that are ranked by users avaliations.
 * The system must provide accessibility requirements and provide good usability. The system must be responsive.
 
+---
+
 ## Project Description
 
 The project will implement a bookstore, that seel only books. Users can create account, buy books, control orders, make wishes and read lists.
@@ -33,23 +37,26 @@ The user general navigation flow, can be viwed on image:
 
 ![diagram image](./projectImgs/diagram.png)
 
+---
+
 ### Functionality
 
 Admin Page: Admin user can crud on users ,books and contacts
 
 Contact Page: User can send Contact request forms
 
-Wishes Page: User can rud wishes list
+Wishes Page: User can crud wishes list
 
 About Page: Nothing
 
-Homem Page: Nothing
+Home Page: Nothing
 
-Registe Page: Anonymous user can create an account
+Register Page: Anonymous user can create an account
 
-Login Page: Existig user can authenticate on account
+Login Page: Existig user can authenticate in account
 
-Orders Page: Nothing
+Orders Page: Authenticated user can see orders
+
 
 Books Page: Nothing
 
@@ -57,14 +64,42 @@ Specif Book Page: User can add "x" quantity to cart and add or remove book from 
 
 Cart Page: User can end and pay a purchase or clean books in cart
 
+---
+
 ## Comments About the Code
+
+The projects until now, are partialy functional. The project implemented the backend using a mock library called MirageJs.
+
+Still needs to implement the Cart, Wishes and Checkout page.
+
+The Signup and Login page are already implemented and functional to test. Can create user, and login into existing accounts.
+
+---
 
 ## Test Plan
 
+The code will be test using jest for unity test and cypress for tests end-to-end.
+
+---
+
 ## Test Results
+
+---
 
 ## Build Procedures
 
+To build the project need the npm. Enter the project folder in the CMD and run:
+
+`npm install`
+
+And in sequence run, to start the server:
+
+`npm run serve`
+
+---
+
 ## Problems
+
+---
 
 ## Comments
