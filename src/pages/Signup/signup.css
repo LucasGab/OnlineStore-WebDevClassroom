@@ -1,0 +1,34 @@
+.signup-container {
+  padding: 1rem 0;
+  display: flex;
+  width: 100%;
+  background-color: rgba(207, 7, 7, 0.623);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  min-height: 90vh;
+}
+
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+.signup-container label {
+  color: white;
+  margin-top: 0.8em;
+}
+
+.signup-container p,button {
+  margin-top: 0.8em;
+  font-size: medium;
+}
+
+.signup-container .login-link {
+  color: black;
+}
+
+.signup-container .login-link:hover {
+  color: white;
+}
