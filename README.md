@@ -57,7 +57,6 @@ Login Page: Existig user can authenticate in account
 
 Orders Page: Authenticated user can see orders
 
-
 Books Page: Nothing
 
 Specif Book Page: User can add "x" quantity to cart and add or remove book from wishes list
@@ -72,7 +71,7 @@ The projects until now, are partialy functional. The project implemented the bac
 
 Still needs to implement the Cart, Wishes and Checkout page.
 
-The Signup and Login page are already implemented and functional to test. Can create user, and login into existing accounts.
+The Signup and Login page are already implemented and functional to test. Can create user, and login into existing accounts. The books already can be added to cart, and will be saved on localstorage.
 
 ---
 
