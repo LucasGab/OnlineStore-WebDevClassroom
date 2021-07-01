@@ -15,14 +15,22 @@
         </ul>
       </div>
       <div class="menu-options">
+        <router-link :to="{ name: 'cart' }">
+          <button class="cart-button" type="button">
+            <div class="badge-button">{{ totalCart }}</div>
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+        </router-link>
         <div v-if="isUserLoggedIn" class="dropdown">
           <button class="profile-button" type="button">
             <i class="fas fa-user"></i>{{ user.name }}
           </button>
+
           <div class="dropdown-content">
             <ul>
-              <li><a>Carrinho</a></li>
-              <li><a>Lista de Leitura</a></li>
+              <li><a>Profile</a></li>
+              <li><a>Orders</a></li>
+              <li><a>Wish List</a></li>
               <li><a @click.prevent="logout">Logout</a></li>
             </ul>
           </div>
@@ -56,7 +64,7 @@ export default {
     },
   },
   computed: {
-    ...mapGetters(["isUserLoggedIn", "user"]),
+    ...mapGetters(["isUserLoggedIn", "user", "totalCart"]),
   },
 };
 </script>

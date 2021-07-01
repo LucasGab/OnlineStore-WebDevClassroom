@@ -7,6 +7,7 @@
       <div class="right-container">
         <h2>{{ book.name }}</h2>
         <h4>{{ book.author }}</h4>
+        <h2>${{ book.price }}</h2>
         <div class="book-review">
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
@@ -15,7 +16,7 @@
           <span class="fa fa-star"></span>
           <span>({{ book.qtdReview }} Review)</span>
         </div>
-        <button>Add to Cart</button>
+        <button @click.prevent="addCart">Add to Cart</button>
       </div>
     </section>
     <section class="specification-container">
@@ -37,12 +38,27 @@ export default {
       book: {},
     };
   },
+  methods: {
+    addCart() {
+      this.$store
+        .dispatch("addBookCart", this.book)
+        .then(() => {
+          this.$router.push({ name: "books" });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
   created() {
     let name = this.$route.params.name;
     BookService.getBook(name)
       .then((response) => {
         if (response.status === 200) {
           this.book = response.data;
+          this.book.price = this.book.price.toFixed(2);
+          this.book.qtd = 1;
+          this.book.total = this.book.price;
         }
       })
       .catch((error) => {

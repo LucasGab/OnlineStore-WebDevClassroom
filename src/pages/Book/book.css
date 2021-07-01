@@ -29,6 +29,10 @@
   width: 30%;
 }
 
+.right-container h1, h2, h3, h4{
+  margin: 0.5em 0;
+}
+
 .specification-container {
   display: flex;
   justify-content: center;
