@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import store from "../store";
 
 const routes = [
   {
@@ -51,11 +52,38 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "book" */ "../pages/Cart/CartPage.vue"),
   },
+  {
+    path: "/wishes",
+    name: "wishes",
+    component: () =>
+      import(/* webpackChunkName: "book" */ "../pages/Wishes/WishesPage.vue"),
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    path: "/orders",
+    name: "orders",
+    component: () =>
+      import(/* webpackChunkName: "book" */ "../pages/Orders/OrdersPage.vue"),
+    meta: {
+      requiresAuth: true,
+    },
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  const authenticatedUser = store.getters.isUserLoggedIn;
+  const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
+
+  // Check for protected route
+  if (requiresAuth && !authenticatedUser) next("login");
+  else next();
 });
 
 export default router;

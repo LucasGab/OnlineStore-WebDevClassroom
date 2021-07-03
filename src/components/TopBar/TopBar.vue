@@ -29,8 +29,12 @@
           <div class="dropdown-content">
             <ul>
               <li><a>Profile</a></li>
-              <li><a>Orders</a></li>
-              <li><a>Wish List</a></li>
+              <li>
+                <router-link :to="{ name: 'orders' }">Orders</router-link>
+              </li>
+              <li>
+                <router-link :to="{ name: 'wishes' }">Wish List</router-link>
+              </li>
               <li><a @click.prevent="logout">Logout</a></li>
             </ul>
           </div>

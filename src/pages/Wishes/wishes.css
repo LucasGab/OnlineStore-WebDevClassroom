@@ -1,0 +1,37 @@
+.wishes-container {
+  padding: 1rem 0;
+  display: flex;
+  width: 100%;
+  background-color: rgba(207, 7, 7, 0.623);
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  min-height: 30vh;
+}
+
+.wishes-container table {
+  width: 80%;
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.book-item {
+  padding: 1em 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.book-item h4 {
+  margin-left: 2em;
+}
+
+.erase-button {
+  background-color: transparent;
+  color: white;
+  font-size: 1em;
+}
+
+.erase-button:hover {
+  color: black;
+}

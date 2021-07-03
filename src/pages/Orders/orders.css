@@ -1,0 +1,17 @@
+.orders-container {
+  padding: 1rem 0;
+  display: flex;
+  width: 100%;
+  background-color: rgba(207, 7, 7, 0.623);
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  min-height: 30vh;
+}
+
+.orders-container table {
+  width: 80%;
+  text-align: left;
+  font-size: 1.5em;
+  border-spacing: 0 1em;
+}

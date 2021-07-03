@@ -2,6 +2,10 @@
 
 Final project of Introduction to Web development classroom - SCC0219, where will be implemented a bookstore.
 
+## Group
+
+---
+
 **Group 19**:
 | **Nome Completo**                 | **N°USP**    | **e-mail**               |
 |-----------------------------------|--------------|--------------------------|
@@ -9,9 +13,9 @@ Final project of Introduction to Web development classroom - SCC0219, where will
 | Lucas Gabriel de Araujo Silva     |   11218880   | lucasgasilva@usp.br      |
 | Thiago Sena de Queiroz            |   11218768   | thiagosdq@usp.br         |
 
----
+## Functional Requirements
 
-## Requirements
+---
 
 * The system must have 2 types of users: Clients and Administrators:
   * Administrators are responsible for registering/managing administrators, customers, and products/services provided. The application already comes with an account admin with password admin.
@@ -27,9 +31,15 @@ Final project of Introduction to Web development classroom - SCC0219, where will
 * Books has avaliation stars, that are ranked by users avaliations.
 * The system must provide accessibility requirements and provide good usability. The system must be responsive.
 
----
+# Project Report
 
-## Project Description
+## Technical requirements
+
+* Node: 16.3.0v
+
+## Description
+
+---
 
 The project will implement a bookstore, that seel only books. Users can create account, buy books, control orders, make wishes and read lists.
 
@@ -39,7 +49,9 @@ The user general navigation flow, can be viwed on image:
 
 ---
 
-### Functionality
+### functionalities
+
+---
 
 Admin Page: Admin user can crud on users ,books and contacts
 
@@ -63,21 +75,46 @@ Specif Book Page: User can add "x" quantity to cart and add or remove book from 
 
 Cart Page: User can end and pay a purchase or clean books in cart
 
+## About the Code and Progress
+
 ---
 
-## Comments About the Code
+- [X] Signup
+- [X] Login
+- [X] Cart (partial)
+- [X] Whish List (partial)
+- [x] Orders (partial)
+- [ ] Profile Page
+- [ ] Admin Page
 
 The projects until now, are partialy functional. The project implemented the backend using a mock library called MirageJs.
 
-Still needs to implement the Cart, Wishes and Checkout page.
+Still needs to implement some cart, wishes, checkout and profile functionalities that needs backend.
 
-The Signup and Login page are already implemented and functional to test. Can create user, and login into existing accounts. The books already can be added to cart, and will be saved on localstorage.
+The functionalities Signup,Login and some of wishes and cart page are already implemented and functional to test. Can create user, and login into existing accounts. The books already can be added to cart, and will be saved on localstorage.
 
 ---
 
 ## Test Plan
 
 The code will be test using jest for unity test and cypress for tests end-to-end.
+
+### Login
+
+Already exists a user with:
+
+email: admin@email.com
+
+password: admin
+
+### Signup
+
+While using on:
+
+`npm run serve`
+
+can be created news users on signup page and login with them.
+
 
 ---
 
@@ -94,6 +131,10 @@ To build the project need the npm. Enter the project folder in the CMD and run:
 And in sequence run, to start the server:
 
 `npm run serve`
+
+To buid static site can run:
+
+`npm run build`
 
 ---
 
