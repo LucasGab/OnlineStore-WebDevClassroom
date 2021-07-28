@@ -43,6 +43,10 @@ Final project of Introduction to Web development classroom - SCC0219, where will
 - Server MongoDB Community: (Version: 5.0.1,Platform: Ubuntu 20.04, Package: server) -> https://www.mongodb.com/try/download/community
 
 
+## Backend Reference
+
+https://github.com/LucasGab/OnlineStore-WebDevClassroom-Backend
+
 ## Description
 
 ---
@@ -142,7 +146,8 @@ To buid static site can run:
 `npm run build`
 
  backend_implementation
-To run testing the backend use:
+ 
+To run testing the backend use (remember to run the backend before https://github.com/LucasGab/OnlineStore-WebDevClassroom-Backend) :
 
 `npm run dev-server`
 
