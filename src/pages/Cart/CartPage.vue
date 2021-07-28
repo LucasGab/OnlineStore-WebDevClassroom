@@ -19,7 +19,7 @@
             <td style="width: 60%">
               <div class="book-item">
                 <img
-                  :src="book.imgUrl"
+                  :src="imgPrefix + book.imgUrl"
                   :alt="book.name"
                   height="220"
                   width="150"
@@ -30,6 +30,15 @@
             <td style="width: 10%">${{ book.price }}</td>
             <td style="width: 20%">{{ book.qtd }}</td>
             <td style="width: 10%">{{ book.total }}</td>
+            <td style="width: 10%">
+              <button
+                @click.prevent="removeCart(book)"
+                class="erase-button"
+                type="button"
+              >
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -41,8 +50,18 @@
 import { mapGetters } from "vuex";
 export default {
   name: "CartPage",
+  methods: {
+    removeCart(book) {
+      this.$store
+        .dispatch("removeBookCart", book)
+        .then(() => {})
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
   computed: {
-    ...mapGetters(["cart"]),
+    ...mapGetters(["cart", "imgPrefix"]),
   },
 };
 </script>

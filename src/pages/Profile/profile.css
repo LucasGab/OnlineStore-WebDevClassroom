@@ -1,0 +1,48 @@
+.profile-container {
+  padding: 1rem 0;
+  display: flex;
+  width: 100%;
+  background-color: rgba(207, 7, 7, 0.623);
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  min-height: 30vh;
+  flex-direction: column;
+}
+
+.header-container {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+}
+
+.form-container {
+  max-width: 50%;
+  min-width: 30%;
+  display: flex;
+  padding: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.form-container {
+  color: white;
+  margin: 0.2rem 0;
+}
+
+.form-container input {
+  margin: 1rem 0;
+}

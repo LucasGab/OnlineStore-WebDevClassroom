@@ -1,9 +1,9 @@
-import axios from "axios";
+import http from "./http";
 
 class UserService {
   async authenticateUser(user) {
     try {
-      let response = await axios.post("/api/authenticate", user);
+      let response = await http.post("api/auth/sign_in", user);
       return { data: response.data, status: response.status };
     } catch (error) {
       console.log(error);
@@ -13,7 +13,7 @@ class UserService {
 
   async createUser(user) {
     try {
-      let response = await axios.post("/api/users", user);
+      let response = await http.post("api/auth/register", user);
       return { data: response.data, status: response.status };
     } catch (error) {
       console.log(error);

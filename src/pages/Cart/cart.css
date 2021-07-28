@@ -24,3 +24,13 @@
 .book-item h4 {
   margin-left: 2em;
 }
+
+.erase-button {
+  background-color: transparent;
+  color: white;
+  font-size: 1em;
+}
+
+.erase-button:hover {
+  color: black;
+}

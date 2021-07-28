@@ -50,13 +50,13 @@ const routes = [
     path: "/cart",
     name: "cart",
     component: () =>
-      import(/* webpackChunkName: "book" */ "../pages/Cart/CartPage.vue"),
+      import(/* webpackChunkName: "cart" */ "../pages/Cart/CartPage.vue"),
   },
   {
     path: "/wishes",
     name: "wishes",
     component: () =>
-      import(/* webpackChunkName: "book" */ "../pages/Wishes/WishesPage.vue"),
+      import(/* webpackChunkName: "wishes" */ "../pages/Wishes/WishesPage.vue"),
     meta: {
       requiresAuth: true,
     },
@@ -65,7 +65,18 @@ const routes = [
     path: "/orders",
     name: "orders",
     component: () =>
-      import(/* webpackChunkName: "book" */ "../pages/Orders/OrdersPage.vue"),
+      import(/* webpackChunkName: "orders" */ "../pages/Orders/OrdersPage.vue"),
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    path: "/profile",
+    name: "profile",
+    component: () =>
+      import(
+        /* webpackChunkName: "profile" */ "../pages/Profile/ProfilePage.vue"
+      ),
     meta: {
       requiresAuth: true,
     },
@@ -80,7 +91,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const authenticatedUser = store.getters.isUserLoggedIn;
   const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
-
+  window.scrollTo(0, 0);
   // Check for protected route
   if (requiresAuth && !authenticatedUser) next("login");
   else next();

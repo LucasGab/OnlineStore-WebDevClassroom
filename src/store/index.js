@@ -6,6 +6,10 @@ export default createStore({
     user: {},
     cart: [],
     wishList: [],
+    imgPrefix:
+      process.env.NODE_ENV === "development"
+        ? ""
+        : "http://localhost:4000/public",
   },
   mutations: {
     USER_LOGIN(state, { token, user }) {
@@ -18,6 +22,15 @@ export default createStore({
     },
     ADD_BOOK_CART(state, book) {
       state.cart.push(book);
+      localStorage.setItem("BOOK_STORE_CART", JSON.stringify(state.cart));
+    },
+    REMOVE_BOOK_CART(state, book) {
+      const index = state.cart.findIndex((element) => {
+        return element === book;
+      });
+      if (index >= 0) {
+        state.cart.splice(index, 1);
+      }
       localStorage.setItem("BOOK_STORE_CART", JSON.stringify(state.cart));
     },
     STORAGE_BOOK_CART(state) {
@@ -47,6 +60,9 @@ export default createStore({
     addBookCart({ commit }, book) {
       commit("ADD_BOOK_CART", book);
     },
+    removeBookCart({ commit }, book) {
+      commit("REMOVE_BOOK_CART", book);
+    },
     getCartLocalStorage({ commit }) {
       commit("STORAGE_BOOK_CART");
     },
@@ -63,6 +79,9 @@ export default createStore({
     },
     totalCart: (state) => {
       return state.cart.length;
+    },
+    imgPrefix: (state) => {
+      return state.imgPrefix;
     },
   },
   modules: {},

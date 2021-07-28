@@ -7,13 +7,16 @@ Final project of Introduction to Web development classroom - SCC0219, where will
 ---
 
 **Group 19**:
-| **Nome Completo**                 | **N°USP**    | **e-mail**               |
+| **Nome Completo** | **N°USP** | **e-mail** |
 |-----------------------------------|--------------|--------------------------|
-| Fabio Dias da Cunha               |   11320874   | fabiodias11@usp.br       |
-| Lucas Gabriel de Araujo Silva     |   11218880   | lucasgasilva@usp.br      |
-| Thiago Sena de Queiroz            |   11218768   | thiagosdq@usp.br         |
+| Fabio Dias da Cunha | 11320874 | fabiodias11@usp.br |
+| Lucas Gabriel de Araujo Silva | 11218880 | lucasgasilva@usp.br |
+| Thiago Sena de Queiroz | 11218768 | thiagosdq@usp.br |
 
 ## Functional Requirements
+
+## Functional Requirements
+
 
 ---
 
@@ -35,7 +38,10 @@ Final project of Introduction to Web development classroom - SCC0219, where will
 
 ## Technical requirements
 
-* Node: 16.3.0v
+- Node: 16.3.0v
+- Linux: 20.04
+- Server MongoDB Community: (Version: 5.0.1,Platform: Ubuntu 20.04, Package: server) -> https://www.mongodb.com/try/download/community
+
 
 ## Description
 
@@ -79,12 +85,12 @@ Cart Page: User can end and pay a purchase or clean books in cart
 
 ---
 
-- [X] Signup
-- [X] Login
-- [X] Cart (partial)
-- [X] Whish List (partial)
+- [x] Signup
+- [x] Login
+- [x] Cart (partial)
+- [x] Whish List (partial)
 - [x] Orders (partial)
-- [ ] Profile Page
+- [x] Profile Page (partial)
 - [ ] Admin Page
 
 The projects until now, are partialy functional. The project implemented the backend using a mock library called MirageJs.
@@ -115,7 +121,6 @@ While using on:
 
 can be created news users on signup page and login with them.
 
-
 ---
 
 ## Test Results
@@ -136,10 +141,17 @@ To buid static site can run:
 
 `npm run build`
 
+ backend_implementation
+To run testing the backend use:
+
+`npm run dev-server`
+
 ---
 
 ## Problems
 
----
+Because of time compared to project complexity, it was not possible finish all features proposed.
 
 ## Comments
+
+To run the backend, all instructions are listed your repository.

@@ -15,11 +15,11 @@
 
 .book-review .fa-star {
   color: black;
-} 
+}
 
-.book-review .fa-star.checked{
+.book-review .fa-star.checked {
   color: orange;
-} 
+}
 
 .left-container {
   width: 30%;
@@ -29,8 +29,19 @@
   width: 30%;
 }
 
-.right-container h1, h2, h3, h4{
+.right-container h1,
+h2,
+h3,
+h4 {
   margin: 0.5em 0;
+}
+
+.right-container button {
+  margin: 1rem;
+}
+
+.right-container button:first-of-type {
+  margin-left: 0;
 }
 
 .specification-container {
