@@ -28,7 +28,9 @@
 
           <div class="dropdown-content">
             <ul>
-              <li><a>Profile</a></li>
+              <li>
+                <router-link :to="{ name: 'profile' }">Profile</router-link>
+              </li>
               <li>
                 <router-link :to="{ name: 'orders' }">Orders</router-link>
               </li>

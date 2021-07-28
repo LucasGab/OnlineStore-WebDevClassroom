@@ -2,7 +2,7 @@
   <main>
     <section class="book-container">
       <div class="left-container">
-        <img :src="book.imgUrl" :alt="book.name" width="250" />
+        <img :src="imgPrefix + book.imgUrl" :alt="book.name" width="250" />
       </div>
       <div class="right-container">
         <h2>{{ book.name }}</h2>
@@ -17,6 +17,7 @@
           <span>({{ book.qtdReview }} Review)</span>
         </div>
         <button @click.prevent="addCart">Add to Cart</button>
+        <button @click.prevent="">Add to Wish List</button>
       </div>
     </section>
     <section class="specification-container">
@@ -30,7 +31,7 @@
 
 <script>
 import BookService from "../../service/BookService";
-
+import { mapGetters } from "vuex";
 export default {
   name: "BooksPage",
   data() {
@@ -64,6 +65,9 @@ export default {
       .catch((error) => {
         console.log(error);
       });
+  },
+  computed: {
+    ...mapGetters(["imgPrefix"]),
   },
 };
 </script>

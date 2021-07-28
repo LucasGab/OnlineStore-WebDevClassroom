@@ -2,7 +2,7 @@
   <div class="book-item">
     <div class="book-card">
       <router-link :to="{ name: 'book', params: { name: book.name } }"
-        ><img :src="book.imgUrl" :alt="book.name" width="200"
+        ><img :src="imgPrefix + book.imgUrl" :alt="book.name" width="200"
       /></router-link>
       <router-link :to="{ name: 'book', params: { name: book.name } }"
         ><h4>{{ book.name }}</h4></router-link
@@ -24,10 +24,14 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "BookCard",
   props: {
     book: Object,
+  },
+  computed: {
+    ...mapGetters(["imgPrefix"]),
   },
 };
 </script>
