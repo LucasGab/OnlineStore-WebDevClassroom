@@ -50,7 +50,7 @@ export default {
       books: [],
     };
   },
-  created() {
+  beforeCreate() {
     BookService.getFrontBooks()
       .then((response) => {
         if (response.status === 200) {

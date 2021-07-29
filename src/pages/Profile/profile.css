@@ -43,6 +43,10 @@
   margin: 0.2rem 0;
 }
 
+.form-container label {
+  color: white;
+}
+
 .form-container input {
   margin: 1rem 0;
 }

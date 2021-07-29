@@ -14,7 +14,7 @@ export default {
     TopBar,
     FootBar,
   },
-  created() {
+  beforeCreate() {
     this.$store.dispatch("getCartLocalStorage");
   },
 };

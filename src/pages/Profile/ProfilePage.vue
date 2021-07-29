@@ -19,7 +19,12 @@
               name="text"
               v-model="new_user.name"
             />
-            <button type="submit">Salvar</button>
+            <button
+              @click.prevent="modifyUser({ name: new_user.name })"
+              type="submit"
+            >
+              Salvar
+            </button>
           </form>
         </div>
         <div class="form-container">
@@ -31,14 +36,12 @@
               name="password"
               v-model="new_user.password"
             />
-            <label for="email_input">Confirmação de Senha</label>
-            <input
-              type="password"
-              id="confirm_password_input"
-              name="confirm_password"
-              v-model="new_user.confirm_password"
-            />
-            <button type="submit">Salvar</button>
+            <button
+              @click.prevent="modifyUser({ password: new_user.password })"
+              type="submit"
+            >
+              Salvar
+            </button>
           </form>
         </div>
       </div>
@@ -48,6 +51,8 @@
 
 <script>
 import { mapGetters } from "vuex";
+import UserService from "../../service/UserService";
+
 export default {
   name: "WishesPage",
   data() {
@@ -55,15 +60,34 @@ export default {
       new_user: {
         name: "",
         password: "",
-        confirm_password: "",
       },
     };
+  },
+  methods: {
+    modifyUser(body) {
+      console.log(body.password);
+      if (body.password) this.new_user.password = "";
+      UserService.modifyUser(this.user._id, body, this.token)
+        .then((response) => {
+          if (response.status === 200) {
+            this.$store
+              .dispatch("userModify", response.data)
+              .then(() => {})
+              .catch((error) => {
+                console.log(error);
+              });
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
   created() {
     this.new_user.name = this.user.name;
   },
   computed: {
-    ...mapGetters(["user"]),
+    ...mapGetters(["user", "token"]),
   },
 };
 </script>

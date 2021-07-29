@@ -11,11 +11,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="book in cart" :key="book.name">
+          <tr v-for="book in books" :key="book.name">
             <td style="width: 60%">
               <div class="book-item">
                 <img
-                  :src="book.imgUrl"
+                  :src="imgPrefix + book.imgUrl"
                   :alt="book.name"
                   height="220"
                   width="150"
@@ -24,7 +24,11 @@
               </div>
             </td>
             <td style="width: 10%">
-              <button class="erase-button" type="button">
+              <button
+                @click.prevent="deleteBook(book._id)"
+                class="erase-button"
+                type="button"
+              >
                 <i class="fas fa-trash"></i>
               </button>
             </td>
@@ -37,10 +41,40 @@
 
 <script>
 import { mapGetters } from "vuex";
+import UserService from "../../service/UserService";
 export default {
   name: "WishesPage",
+  data() {
+    return {
+      books: [],
+    };
+  },
+  methods: {
+    deleteBook(book_id) {
+      UserService.deleteWishList(book_id, this.$store.state.token)
+        .then((response) => {
+          if (response.status === 200) {
+            this.books = response.data["bookWishList"];
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
+  beforeCreate() {
+    UserService.getWishList(this.$store.state.token)
+      .then((response) => {
+        if (response.status === 200) {
+          this.books = response.data["bookWishList"];
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
   computed: {
-    ...mapGetters(["cart"]),
+    ...mapGetters(["imgPrefix"]),
   },
 };
 </script>

@@ -16,6 +16,9 @@ export default createStore({
       state.token = token;
       state.user = user;
     },
+    USER_MODIFY(state, { user }) {
+      state.user = user;
+    },
     USER_LOGOUT(state) {
       state.token = null;
       state.user = {};
@@ -49,6 +52,9 @@ export default createStore({
       });
       return response;
     },
+    userModify({ commit }, user) {
+      commit("USER_MODIFY", { user });
+    },
     userLogout({ commit }) {
       commit("USER_LOGOUT");
     },
@@ -73,6 +79,9 @@ export default createStore({
     },
     user: (state) => {
       return state.user;
+    },
+    token: (state) => {
+      return state.token;
     },
     cart: (state) => {
       return state.cart;

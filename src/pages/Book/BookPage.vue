@@ -9,15 +9,32 @@
         <h4>{{ book.author }}</h4>
         <h2>${{ book.price }}</h2>
         <div class="book-review">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-          <span>({{ book.qtdReview }} Review)</span>
+          <span
+            class="fa fa-star"
+            :class="{ checked: book.rating >= 1 }"
+          ></span>
+          <span
+            class="fa fa-star"
+            :class="{ checked: book.rating >= 2 }"
+          ></span>
+          <span
+            class="fa fa-star"
+            :class="{ checked: book.rating >= 3 }"
+          ></span>
+          <span
+            class="fa fa-star"
+            :class="{ checked: book.rating >= 4 }"
+          ></span>
+          <span
+            class="fa fa-star"
+            :class="{ checked: book.rating >= 5 }"
+          ></span>
+          <span :style="{ display: 'inline-block', marginLeft: '1rem' }"
+            >({{ book.qtdReview }} Review)</span
+          >
         </div>
         <button @click.prevent="addCart">Add to Cart</button>
-        <button @click.prevent="">Add to Wish List</button>
+        <button @click.prevent="addWishList">Add to Wish List</button>
       </div>
     </section>
     <section class="specification-container">
@@ -31,6 +48,7 @@
 
 <script>
 import BookService from "../../service/BookService";
+import UserService from "../../service/UserService";
 import { mapGetters } from "vuex";
 export default {
   name: "BooksPage",
@@ -50,8 +68,19 @@ export default {
           console.log(error);
         });
     },
+    addWishList() {
+      UserService.addWishList(this.book._id, this.token)
+        .then((response) => {
+          if (response.status === 201) {
+            this.$router.push({ name: "wishes" });
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
-  created() {
+  beforeCreate() {
     let name = this.$route.params.name;
     BookService.getBook(name)
       .then((response) => {
@@ -67,7 +96,7 @@ export default {
       });
   },
   computed: {
-    ...mapGetters(["imgPrefix"]),
+    ...mapGetters(["imgPrefix", "token"]),
   },
 };
 </script>
