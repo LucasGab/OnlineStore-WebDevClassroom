@@ -91,10 +91,10 @@ Cart Page: User can end and pay a purchase or clean books in cart
 
 - [x] Signup
 - [x] Login
-- [x] Cart (partial)
-- [x] Whish List (partial)
+- [x] Cart
+- [x] Whish List
 - [x] Orders (partial)
-- [x] Profile Page (partial)
+- [x] Profile Page
 - [ ] Admin Page
 
 The projects until now, are partialy functional. The project implemented the backend using a mock library called MirageJs.
